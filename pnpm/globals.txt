@@ -1,0 +1,8 @@
+# Global pnpm CLI tools (installed with: pnpm add -g)
+# One package per line; lines starting with # are ignored.
+
+@anthropic-ai/claude-code
+@anthropic-ai/claude
+@anthropic-ai/claude-cowork
+@google/gemini-cli
+@openai/codex

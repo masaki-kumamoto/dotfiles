@@ -1,0 +1,32 @@
+[tools]
+
+# JS ecosystem
+node = "lts"
+pnpm = "latest"
+bun = "latest"
+
+# Python ecosystem
+python = "3.12"
+uv = "latest"
+
+# Compiled languages
+go = "latest"
+rust = "stable"
+
+# JVM ecosystem
+java = "temurin-21"
+
+# .NET
+dotnet = "8"
+
+# Ruby
+ruby = "latest"
+
+# PHP (installed via Homebrew; asdf-php requires Bison 3+ and build deps, often fails on macOS)
+
+# Infra
+terraform = "latest"
+
+# Utilities
+jq = "latest"
+yq = "latest"

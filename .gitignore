@@ -1,0 +1,17 @@
+# Backup files created by bootstrap
+*.bak.*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Local overrides (if you ever put them inside the repo by mistake)
+.zshrc.local
+.gitconfig.local
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*~
