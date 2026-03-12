@@ -1,8 +1,8 @@
-# Homebrew path
-if [[ -d /opt/homebrew/bin ]]; then
+# Native Apple Silicon Homebrew path
+if [[ -x /opt/homebrew/bin/brew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [[ -d /opt/homebrew/bin ]]; then
   export PATH="/opt/homebrew/bin:$PATH"
-elif [[ -d /usr/local/bin ]]; then
-  export PATH="/usr/local/bin:$PATH"
 fi
 
 # History

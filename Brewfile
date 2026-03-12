@@ -1,85 +1,86 @@
 # =========================================
 # Brewfile
-# Modern macOS setup for development
+# Apple Silicon macOS setup for development
 # =========================================
 
 # -----------------------------------------
 # Core CLI / Unix Utilities
 # -----------------------------------------
-brew "git"
-brew "gh"
-brew "jq"
-brew "ripgrep"
-brew "fd"
-brew "bat"
-brew "tree"
-brew "htop"
-brew "coreutils"
-brew "gnu-sed"
-brew "stow"
+brew "git"                    # Distributed version control
+brew "gh"                     # GitHub CLI
+brew "jq"                     # JSON processor for CLI
+brew "ripgrep"                # Fast recursive grep (rg)
+brew "fd"                     # Simple fast find alternative
+brew "bat"                    # Cat with syntax highlighting
+brew "tree"                   # Directory structure viewer
+brew "htop"                   # Interactive process viewer
+brew "coreutils"              # GNU core utilities (gdate, etc.)
+brew "gnu-sed"                # GNU sed (stream editor)
+brew "stow"                   # Symlink farm manager for dotfiles
 
 # -----------------------------------------
 # Modern Shell / Terminal Workflow
 # -----------------------------------------
-brew "mise"
-brew "starship"
-brew "zoxide"
-brew "fzf"
-brew "direnv"
-brew "eza"
-brew "lazygit"
-brew "tmux"
-brew "neovim"
+brew "mise"                   # Runtime version manager (asdf successor)
+brew "starship"               # Minimal fast shell prompt
+brew "zoxide"                 # Smarter cd (directory jumper)
+brew "fzf"                    # Fuzzy finder for CLI
+brew "direnv"                 # Per-directory env loader
+brew "eza"                    # Modern ls replacement
+brew "lazygit"                # Terminal UI for git
+brew "tmux"                   # Terminal multiplexer
+brew "neovim"                 # Vim-fork text editor
 
 # -----------------------------------------
 # Cloud / Platform CLIs
 # -----------------------------------------
 # Tier 3 (e.g. newer macOS) has no bottle; build from source when needed
-brew "awscli", args: ["build-from-source"]
-brew "azure-cli"
-cask "gcloud-cli"
+brew "awscli", args: ["build-from-source"]  # Amazon Web Services CLI
+brew "azure-cli"                            # Microsoft Azure CLI
+cask "gcloud-cli"                           # Google Cloud SDK
 
 # -----------------------------------------
 # PHP (mise asdf-php often fails on macOS; use Homebrew for reliable install)
 # -----------------------------------------
-brew "php"
-brew "composer"
+brew "php"                    # PHP runtime
+brew "composer"               # PHP dependency manager
 
 # -----------------------------------------
 # Desktop Apps - Browsers
 # -----------------------------------------
-cask "arc"
+cask "arc"                    # Chromium-based browser by The Browser Company
 
 # -----------------------------------------
 # Desktop Apps - Productivity / Window Mgmt
 # -----------------------------------------
-cask "raycast"
-cask "rectangle"
-cask "alt-tab"
-cask "stats"
+cask "raycast"                # Launcher, shortcuts, and automation
+cask "rectangle"              # Window management (snap/resize)
+cask "alt-tab"                # Windows-style Alt+Tab switcher
+cask "stats"                  # Menu bar system monitor (CPU, RAM, network)
 
 # -----------------------------------------
 # Desktop Apps - AI / Development
 # -----------------------------------------
-cask "chatgpt"
-cask "cursor"
-cask "visual-studio-code"
-cask "iterm2"
-cask "orbstack"
-cask "postman"
-cask "codex-app"
-cask "claude-code"
+cask "chatgpt"                # OpenAI ChatGPT desktop app
+cask "cursor"                 # AI-powered code editor
+cask "visual-studio-code"     # VS Code editor
+cask "iterm2"                 # Terminal emulator for macOS
+cask "orbstack"               # Lightweight Docker & Linux VMs
+cask "postman"                # API development and testing
+cask "codex-app"              # Codex AI coding assistant
+cask "claude-code"            # Claude AI coding assistant
 
 
 # -----------------------------------------
 # Desktop Apps - Writing / Language / Notes
 # -----------------------------------------
-cask "grammarly-desktop"
-cask "deepl"
-cask "obsidian"
+cask "grammarly-desktop"      # Writing assistant and grammar checker
+cask "deepl"                  # Translation app (DeepL)
+cask "obsidian"               # Markdown-based note-taking and knowledge base
+cask "descript"               # Podcast/video editor with transcription
 
 # -----------------------------------------
 # Desktop Apps - Utilities
 # -----------------------------------------
-cask "the-unarchiver"
-cask "vlc"
+cask "the-unarchiver"         # Archive extractor (zip, rar, 7z, etc.)
+cask "vlc"                    # Media player for video/audio

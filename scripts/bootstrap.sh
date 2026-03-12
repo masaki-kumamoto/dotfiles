@@ -11,8 +11,47 @@ warn() {
   printf "\n[warn] %s\n" "$1"
 }
 
+die() {
+  printf "\n[error] %s\n" "$1" >&2
+  exit 1
+}
+
 have() {
   command -v "$1" >/dev/null 2>&1
+}
+
+ensure_apple_silicon() {
+  local os_name
+  local shell_arch
+  local arm64_capable
+  local brew_prefix
+
+  os_name="$(uname -s)"
+  shell_arch="$(uname -m)"
+  arm64_capable="$(sysctl -in hw.optional.arm64 2>/dev/null || printf '0')"
+
+  if [ "$os_name" != "Darwin" ]; then
+    die "This repo targets macOS on Apple Silicon only."
+  fi
+
+  if [ "$arm64_capable" != "1" ]; then
+    die "This repo targets Apple Silicon Macs only. Intel Macs are not supported."
+  fi
+
+  if [ "$shell_arch" != "arm64" ]; then
+    die "This shell is running under Rosetta or another non-native architecture. Open a native ARM64 terminal and re-run bootstrap."
+  fi
+
+  if [ -x /opt/homebrew/bin/brew ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  fi
+
+  if have brew; then
+    brew_prefix="$(brew --prefix)"
+    if [ "$brew_prefix" != "/opt/homebrew" ]; then
+      die "Expected Apple Silicon Homebrew at /opt/homebrew, found ${brew_prefix}. Reinstall or use native Homebrew before continuing."
+    fi
+  fi
 }
 
 backup_if_exists() {
@@ -112,6 +151,7 @@ post_checks() {
 main() {
   log "Starting bootstrap"
 
+  ensure_apple_silicon
   install_brew_bundle
   link_dotfiles
   install_mise_tools
