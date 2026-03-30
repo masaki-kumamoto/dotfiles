@@ -38,6 +38,7 @@ brew "neovim"                 # Vim-fork text editor
 brew "awscli", args: ["build-from-source"]  # Amazon Web Services CLI
 brew "azure-cli"                            # Microsoft Azure CLI
 cask "gcloud-cli"                           # Google Cloud SDK
+brew "snowflake-cli"                        # Snowflake data platform CLI (snow)
 
 # -----------------------------------------
 # PHP (mise asdf-php often fails on macOS; use Homebrew for reliable install)
@@ -63,6 +64,7 @@ cask "stats"                  # Menu bar system monitor (CPU, RAM, network)
 # -----------------------------------------
 cask "chatgpt"                # OpenAI ChatGPT desktop app
 cask "cursor"                 # AI-powered code editor
+cask "cursor-cli"             # Cursor terminal agent (cursor-agent)
 cask "visual-studio-code"     # VS Code editor
 cask "iterm2"                 # Terminal emulator for macOS
 cask "orbstack"               # Lightweight Docker & Linux VMs

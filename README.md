@@ -24,11 +24,11 @@ This repo currently installs and configures:
 
 - Core CLI tools: `git`, `gh`, `jq`, `ripgrep`, `fd`, `bat`, `tree`, `htop`, `coreutils`, `gnu-sed`, `stow`
 - Shell workflow tools: `mise`, `starship`, `zoxide`, `fzf`, `direnv`, `eza`, `lazygit`, `tmux`, `neovim`
-- Cloud tooling: `awscli`, `azure-cli`, `gcloud-cli`
+- Cloud tooling: `awscli`, `azure-cli`, `gcloud-cli`, `snowflake-cli`
 - Language tooling: `php`, `composer`
 - Runtime versions via `mise`: Node LTS, pnpm, Bun, Python 3.12, uv, Go, Rust, Java 21, .NET 8, Ruby, Terraform, `jq`, and `yq`
 - Global pnpm CLIs: Claude Code, Claude, Claude Cowork, Gemini CLI, and Codex
-- macOS apps from Homebrew casks: Arc, Raycast, Rectangle, AltTab, Stats, ChatGPT, Cursor, VS Code, iTerm2, OrbStack, Postman, Codex, Claude Code, Grammarly, DeepL, Obsidian, Descript, The Unarchiver, and VLC
+- macOS apps from Homebrew casks: Arc, Raycast, Rectangle, AltTab, Stats, ChatGPT, Cursor, Cursor CLI, VS Code, iTerm2, OrbStack, Postman, Codex, Claude Code, Grammarly, DeepL, Obsidian, Descript, The Unarchiver, and VLC
 
 The exact package list lives in `Brewfile`, so update that file rather than this README when your app/tool inventory changes.
 
@@ -156,13 +156,13 @@ Source: `Brewfile`
 | ----------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | Core CLI tools          | `git`, `gh`, `jq`, `ripgrep`, `fd`, `bat`, `tree`, `htop`, `coreutils`, `gnu-sed`, `stow` | Provides the baseline Unix and developer command-line utilities used across the rest of the setup.  |
 | Shell workflow tools    | `mise`, `starship`, `zoxide`, `fzf`, `direnv`, `eza`, `lazygit`, `tmux`, `neovim`         | Adds the main terminal workflow tools for runtime management, navigation, search, Git, and editing. |
-| Cloud and platform CLIs | `awscli`, `azure-cli`                                                                     | Installs vendor CLIs for interacting with cloud accounts and platform services from the terminal.   |
+| Cloud and platform CLIs | `awscli`, `azure-cli`, `snowflake-cli`                                                     | Installs vendor CLIs for AWS, Azure, and Snowflake from the terminal.                                |
 | Language tooling        | `php`, `composer`                                                                         | Installs PHP itself and Composer for PHP dependency management outside of `mise`.                   |
 
 
 ### Homebrew Casks
 
-These are GUI applications installed through Homebrew casks from `Brewfile`.
+These are installed through Homebrew casks from `Brewfile` (mostly desktop apps; some casks ship CLIs such as SDKs or agents).
 
 Source: `Brewfile`
 
@@ -172,7 +172,7 @@ Source: `Brewfile`
 | Cloud and platform apps | `gcloud-cli`                                                                                           | Adds the Google Cloud SDK as a cask-installed application package.                                             |
 | Browser                 | `arc`                                                                                                  | Installs the primary browser included in this workstation setup.                                               |
 | Productivity            | `raycast`, `rectangle`, `alt-tab`, `stats`                                                             | Adds launchers, window management, app switching, and system-monitoring utilities for macOS.                   |
-| AI and development      | `chatgpt`, `cursor`, `visual-studio-code`, `iterm2`, `orbstack`, `postman`, `codex-app`, `claude-code` | Installs the main desktop tools for coding, terminal work, containers, API testing, and AI-assisted workflows. |
+| AI and development      | `chatgpt`, `cursor`, `cursor-cli`, `visual-studio-code`, `iterm2`, `orbstack`, `postman`, `codex-app`, `claude-code` | Installs the main desktop tools for coding, terminal work, containers, API testing, AI-assisted workflows, and the Cursor CLI agent. |
 | Writing and notes       | `grammarly-desktop`, `deepl`, `obsidian`, `descript`                                                   | Covers writing assistance, translation, note-taking, and transcription/editing workflows.                      |
 | Utilities               | `the-unarchiver`, `vlc`                                                                                | Adds general-purpose desktop tools for archive extraction and media playback.                                  |
 
