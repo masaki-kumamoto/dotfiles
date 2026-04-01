@@ -68,8 +68,10 @@ cask "cursor-cli"             # Cursor terminal agent (cursor-agent)
 cask "visual-studio-code"     # VS Code editor
 cask "iterm2"                 # Terminal emulator for macOS
 cask "orbstack"               # Lightweight Docker & Linux VMs
+brew "podman"                 # Daemonless container engine and CLI
 cask "postman"                # API development and testing
 cask "codex-app"              # Codex AI coding assistant
+cask "claude"                 # Anthropic Claude desktop app
 cask "claude-code"            # Claude AI coding assistant
 
 
@@ -86,3 +88,4 @@ cask "descript"               # Podcast/video editor with transcription
 # -----------------------------------------
 cask "the-unarchiver"         # Archive extractor (zip, rar, 7z, etc.)
 cask "vlc"                    # Media player for video/audio
+cask "elgato-camera-hub"      # Webcam control app for Elgato devices
