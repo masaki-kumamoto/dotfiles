@@ -28,7 +28,7 @@ This repo currently installs and configures:
 - Language tooling: `php`, `composer`
 - Runtime versions via `mise`: Node LTS, pnpm, Bun, Python 3.12, uv, Go, Rust, Java 21, .NET 8, Ruby, Terraform, `jq`, and `yq`
 - Global pnpm CLIs: Claude Code, Claude, Claude Cowork, Gemini CLI, and Codex
-- macOS apps from Homebrew casks: Arc, Raycast, Rectangle, AltTab, Stats, ChatGPT, Cursor, Cursor CLI, VS Code, iTerm2, OrbStack, Postman, Codex, Claude, Claude Code, Grammarly, DeepL, Obsidian, Descript, The Unarchiver, VLC, and Elgato Camera Hub
+- macOS apps from Homebrew casks: Arc, Raycast, Rectangle, AltTab, Stats, Windows App, ChatGPT, Cursor, Cursor CLI, VS Code, iTerm2, OrbStack, Postman, Codex, Claude, Claude Code, Grammarly, DeepL, Obsidian, Descript, The Unarchiver, VLC, and Elgato Camera Hub
 
 The exact package list lives in `Brewfile`, so update that file rather than this README when your app/tool inventory changes.
 
@@ -171,7 +171,7 @@ Source: `Brewfile`
 | ----------------------- | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
 | Cloud and platform apps | `gcloud-cli`                                                                                           | Adds the Google Cloud SDK as a cask-installed application package.                                             |
 | Browser                 | `arc`                                                                                                  | Installs the primary browser included in this workstation setup.                                               |
-| Productivity            | `raycast`, `rectangle`, `alt-tab`, `stats`                                                             | Adds launchers, window management, app switching, and system-monitoring utilities for macOS.                   |
+| Productivity            | `raycast`, `rectangle`, `alt-tab`, `stats`, `windows-app`                                                | Adds launchers, window management, app switching, system monitoring, and Microsoft Windows App for remote Windows sessions. |
 | AI and development      | `chatgpt`, `cursor`, `cursor-cli`, `visual-studio-code`, `iterm2`, `orbstack`, `postman`, `codex-app`, `claude`, `claude-code` | Installs the main desktop tools for coding, terminal work, containers, API testing, AI-assisted workflows, and the Cursor CLI agent. |
 | Writing and notes       | `grammarly-desktop`, `deepl`, `obsidian`, `descript`                                                   | Covers writing assistance, translation, note-taking, and transcription/editing workflows.                      |
 | Utilities               | `the-unarchiver`, `vlc`, `elgato-camera-hub`                                                          | Adds general-purpose desktop tools for archive extraction, media playback, and Elgato webcam controls.         |

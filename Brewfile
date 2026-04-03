@@ -58,6 +58,7 @@ cask "raycast"                # Launcher, shortcuts, and automation
 cask "rectangle"              # Window management (snap/resize)
 cask "alt-tab"                # Windows-style Alt+Tab switcher
 cask "stats"                  # Menu bar system monitor (CPU, RAM, network)
+cask "windows-app"            # Microsoft Windows App (connect to remote Windows)
 
 # -----------------------------------------
 # Desktop Apps - AI / Development
